@@ -1,0 +1,89 @@
+<!-- src/main/resources/templates/main.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        .main-container {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #f8f9fa;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar">
+        <span class="navbar-brand">Your App Name</span>
+    </nav>
+    <div class="main-container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="/test1">CallExtAPI(Hello)</a></li>
+                <li><a href="/test2">CallExtAPI(jwtByCookie)</a></li>
+                <li><a href="/test3">CallLocalByPublicKey(validate token)</a></li>
+                <!-- Add more menu items as needed -->
+            </ul>
+        </div>
+        <div class="main-content">
+            <!-- Main content goes here -->
+            <h2>Welcome to the Main Page!</h2>
+            <p th:text="${result}"></p>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
